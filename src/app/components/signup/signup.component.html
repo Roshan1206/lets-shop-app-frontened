@@ -1,0 +1,26 @@
+<div class="container-fluid signup">
+    <form [formGroup]="signupForm" (submit)="onSignup()">
+        <div class="form-group py-lg-2">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" id="firstname" class="form-control" formControlName="firstname">
+        </div>
+        <div class="form-group py-lg-2">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" id="lastname" class="form-control" formControlName="lastname">
+        </div>
+        <div class="form-group py-lg-2">
+            <label for="userEmail" class="form-label">Email</label>
+            <input type="text" id="userEmail" class="form-control" formControlName="userEmail">
+        </div>
+        <div class="form-group py-lg-2">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" formControlName="password">
+        </div>
+        <div class="form-group py-lg-2">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+        </div>
+        <p *ngIf="!isPasswordSame" class="alert alert-warning">Confirm Password is not as same as Password</p>
+        <button class="btn btn-primary">Sign up</button>
+    </form>
+</div>
